@@ -14,4 +14,14 @@ public class Deck {
             }
         }
     }
+    
+    public int getDeckSize() {
+        return cards.size();
+    }
+
+    public void getAllElements(){
+        for (Card card : cards) {
+            System.out.println("\t" + card);
+        }
+    }
 }
