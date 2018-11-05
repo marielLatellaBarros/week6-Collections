@@ -12,20 +12,17 @@ public class Deck {
                 cards.add(new Card(color, value));
             }
         }
+        Collections.shuffle((List)cards);
     }
 
     public int getDeckSize() {
         return cards.size();
     }
 
-    public void getAllElements(){
+    public void showDeck(){
         for (Card card : cards) {
             System.out.println("\t" + card);
         }
-    }
-
-    public void shuffleCards(){
-        Collections.shuffle((List)cards);
     }
 
     public Card dealCard() {
