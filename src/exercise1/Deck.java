@@ -1,7 +1,6 @@
 package exercise1;
 
-import java.util.Deque;
-import java.util.LinkedList;
+import java.util.*;
 
 public class Deck {
     Deque<Card> cards;
@@ -14,7 +13,7 @@ public class Deck {
             }
         }
     }
-    
+
     public int getDeckSize() {
         return cards.size();
     }
@@ -23,5 +22,9 @@ public class Deck {
         for (Card card : cards) {
             System.out.println("\t" + card);
         }
+    }
+
+    public void shuffleCards(){
+        Collections.shuffle((List)cards);
     }
 }
