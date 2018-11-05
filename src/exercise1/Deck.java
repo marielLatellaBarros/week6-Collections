@@ -27,4 +27,13 @@ public class Deck {
     public void shuffleCards(){
         Collections.shuffle((List)cards);
     }
+
+    public Card dealCard() {
+        cardToBeRemoved();
+        return cards.pollFirst();
+    }
+
+    private void cardToBeRemoved() {
+        System.out.println(cards.peekFirst());
+    }
 }
