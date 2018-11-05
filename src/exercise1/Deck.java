@@ -6,7 +6,7 @@ public class Deck {
     Deque<Card> cards;
 
     public Deck() {
-        cards = new LinkedList<Card>();
+        cards = new LinkedList<>();
         for (Color color : Color.values()) {
             for (Value value : Value.values()) {
                 cards.add(new Card(color, value));
@@ -19,10 +19,12 @@ public class Deck {
         return cards.size();
     }
 
-    public void showDeck(){
+    public String showDeck(){
+        StringBuilder showDeck = new StringBuilder();
         for (Card card : cards) {
-            System.out.println("\t" + card);
+            showDeck.append(card + "\n");
         }
+        return  showDeck.toString();
     }
 
     public Card dealCard() {
