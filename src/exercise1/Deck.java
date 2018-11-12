@@ -33,6 +33,6 @@ public class Deck {
     }
 
     private void cardToBeRemoved() {
-        System.out.println(cards.peekFirst());
+        System.out.println("This card will be removed: " + cards.peekFirst());
     }
 }
